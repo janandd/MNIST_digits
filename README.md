@@ -11,5 +11,5 @@ The solution is implemented in two ways:
 The file digitsNN.py implements an ANN from scratch. The forward propagation, cost function and back propagation was computed without use of any ML/DL library or framework. The purpose of this was to understand first-hand the workings of an ANN, rather than to achieve a high accuracy score.
 
 ### 2. ANN using Keras framework
+The file digitsNN.py implements an ANN using the Keras framework, thereby increasing the speed as well as accuracy. Like the previous one, this network too uses a single hidden layer with 600 units.
 
-This will follow soon.
