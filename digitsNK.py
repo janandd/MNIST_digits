@@ -89,17 +89,19 @@ iters = 4
 # Start time at start of iterations
 t0 = time()
 
-ledom = Sequential([Dense(l2, input_shape=(n,), activation='sigmoid'), 
-            Dense(10, activation='sigmoid')])
-ledom.compile(SGD(lr=alpha), loss='mean_squared_error', metrics=['accuracy'])
-ledom.fit(X_trn, y_trn, batch_size=10, epochs=iters, verbose=1, 
-            validation_split=0.20)
-
-
-y_prd = ledom.predict(X_tst)
+#ledom = Sequential([
+#            Dense(l2, input_shape=(n,), activation='sigmoid'), 
+#            Dense(10, activation='sigmoid')
+#            ])
+#ledom.compile(SGD(lr=alpha), loss='mean_squared_error', metrics=['accuracy'])
+#ledom.fit(X_trn, y_trn, batch_size=10, epochs=iters, verbose=1, 
+#            validation_split=0.20)
+#
+#
+#y_prd = ledom.predict(X_tst)
 
 # Print the time required to complete all the iterations
-print(time() - t0)
+#print(time() - t0)
 
 # *~*~*~*~*~*~*~*~*~*~* keras Sequential ~*~*~*~*~*~*~*~*~*~*~*
 
@@ -107,9 +109,9 @@ print(time() - t0)
 
 # *~*~*~*~*~*~*~*~*~*~*~*~ Output csv *~*~*~*~*~*~*~*~*~*~*~*~*
 
-outdig = [np.argmax(c0) for c0 in y_prd]
-
-outcsv = pd.DataFrame({'ImageId':np.arange(m1)+1, 'Label':outdig})
-outcsv.to_csv('output.csv', index=False)
+#outdig = [np.argmax(c0) for c0 in y_prd]
+#
+#outcsv = pd.DataFrame({'ImageId':np.arange(m1)+1, 'Label':outdig})
+#outcsv.to_csv('output.csv', index=False)
 
 # *~*~*~*~*~*~*~*~*~*~*~*~ Output csv *~*~*~*~*~*~*~*~*~*~*~*~*
